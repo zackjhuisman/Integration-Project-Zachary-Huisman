@@ -1,11 +1,37 @@
 // Zachary Huisman
 // I love the game borderlands and wanted to recreate the game's random gun generator in java
+
+// Pt.1 STARTS ON LINE 34
+// Pt.2 STARTS ON LINE 95
+
 import java.util.*;
-import java.io.*;
+import java.util.stream.*;
+
+class integrationProjectDisplay {
+
+    public void overload(int overload) {
+        // overload display
+    }
+
+    public void overload(int overload, double number) {
+        // overload display
+    }
+}
+
+class polymorphismDisplay extends integrationProjectDisplay {
+
+    private int thisShowcase;
+
+    polymorphismDisplay(int thisShowcase) {
+        this.thisShowcase = thisShowcase;
+    }
+}
 
 class Main {
 
     public static void main(String[] argh) {
+
+        // Pt.1
 
         /*
             for class code
@@ -65,6 +91,90 @@ class Main {
         criteriaOperatorsNum8 += 4;
         //relational operator on line 109 and conditional operator on 86 99
         //Operator Precedence is the order that java calculates expressions in the same operation. i.e. multiplication first then addition.
+
+        // Pt.2
+
+        //While loop on line 182
+        for (int k = 0; k < 10; k++) {
+            // System.out.print(k); Showcase only
+        }
+
+        int u = 0;
+        do {
+            // System.out.print("This is a do-while loop");
+            u++;
+        } while (u < 10);
+
+        for (int o = 0; o < 10; o++) {
+            if (o % 2 == 0) {
+                continue;
+            } else {
+                break;
+            }
+            // System.out.print("this will not print if o is even")
+        }
+        // continue statements when used will skip the rest of the code in the body of the loop and continue to the next iteration.
+        // break statements when used will stop the loop immediately and continue running the code after the loop.
+
+        // Getter and setter methods with constructor in randomRange.java file
+
+        //overload example on line 12 and 16
+
+        // inheritance allows you to copy code from one class and transfer its contents to another. along with improve upon the base class without changing the base class.
+
+        //Polymorphism on line 21
+
+        //This on line 26
+
+        int[] arrayTest = new int[]{1, 7, 2, 10, 12};
+        int smallest = 1000;
+        int smallestIndex = 0;
+        int sum = 0;
+        for (int i = 0; i < arrayTest.length; i++) {
+            if (arrayTest[i] <= smallest) {
+                smallest = arrayTest[i]; // finds smallest in the array
+                smallestIndex = i;
+            }
+            sum += i;
+        }
+
+        //smallestIndex holds the index value of the smallest value
+
+        //sum holds the sum of the arrayTest
+
+        for (int i : arrayTest) {
+            // enhanced loop
+        }
+
+        //ArrayList is on randomRange.java on line 4
+        int max = 0;
+        int multiSum = 0;
+        String arrCoordinates = "";
+        int[][] arr = new int[][]{
+                {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                {0, 0, 0, 0, 1, 0, 0, 0, 0, 0},
+                {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+        };
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 9; j++) {
+                if (arr[i][j] == 1) {
+                    arrCoordinates = "1 found at " + i + " " + j;
+                }
+            }
+        }
+        //System.out.println(arrCoordinates); finds 1 in the 2D array
+
+        /*
+        try {
+            int divideByZero = 4/0;
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        try catch block used to stop a divide by zero.
+        */
+
 
         //actual program
         System.out.println("Hello! ");
